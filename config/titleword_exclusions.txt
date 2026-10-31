@@ -1,0 +1,3 @@
+# Additional non-standard exclusions.
+# Intentionally empty in the submission analysis: no generic scientific words
+# are removed ad hoc after inspecting results.

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite this software and the relevant research article when using this repository."
+type: software
+title: "FusEurope Analysis: Reproducibility Pipeline for Historical Nuclear Fusion Research"
+authors:
+  - family-names: Lalli
+    given-names: Roberto
+version: 0.19.0rc1

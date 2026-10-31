@@ -1,0 +1,20 @@
+name: fuseurope-reproducibility
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.5
+  - pandas=2.2.3
+  - numpy=2.3.5
+  - scipy=1.17.0
+  - networkx=3.6.1
+  - statsmodels=0.14.6
+  - scikit-learn=1.8.0
+  - matplotlib=3.10.8
+  - nbformat=5.10.4
+  # Runtime renderer used by the final sfdp network-figure workflow.
+  - graphviz=14.1.2
+  - pygraphviz=2.0.2
+  - pyyaml=6.0.3
+  - nbclient=0.10.2
+  - pytest=9.0.2
+  - jupyter=1.1.1

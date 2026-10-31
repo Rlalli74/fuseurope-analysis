@@ -1,0 +1,56 @@
+mode_defaults:
+  reviewer_demo: true
+  licensed_full_run: false
+
+corpora:
+  preserved_retrieval:
+    role: publication_counts_source_coverage_author_identity
+    records: 46443
+    unique_ut: 46443
+    columns: 46
+    sha256: 63b7725a3a40091d0b81107c7fd36a705c71aecdf5e658a1f69cca0089d8f414
+  analytical:
+    role: networks_communities_continuity_lexical_country_institution
+    records: 45453
+    columns: 49
+    exclusions:
+      editorial_material: 985
+      additional_event_summaries: 5
+      total: 990
+
+author_identity:
+  construct_on: preserved_retrieval
+  apply_unchanged_to: analytical
+  normalized_forms: 41966
+  canonical_identities: 40073
+  merged_variants: 1893
+  automatic_merges: 1844
+  curated_merge: 50
+  curated_keep_separate: 3
+  analytical_normalized_forms: 41793
+  analytical_canonical_identities: 39906
+  safeguards:
+    incompatible_initials_block: true
+    same_paper_cooccurrence_blocks: true
+    large_team_shared_coauthors_not_decisive: true
+    unresolved_remain_separate: true
+
+network:
+  projection: undirected_full_count_clique
+  lcc_uses_edge_presence: true
+  louvain_weight: paper_count
+  louvain_resolution: 1.0
+  principal_seed: 42
+  canonical_insertion_order: true
+  fractional_pair_contribution: 1_over_n_minus_1
+
+document_type_sensitivity:
+  - unrestricted_analytical_corpus
+  - exclude_meeting_abstracts
+  - exclude_proceedings_and_meeting_abstracts
+  - articles_only
+
+licensing:
+  raw_and_record_level_outputs: private
+  reviewer_build: explicit_allowlist
+  fail_closed_scan: true

@@ -1,0 +1,7 @@
+# Author transliteration and orthographic-variant audit
+
+A targeted author-identity audit supplemented the conservative automatic disambiguation. The audit first revisited the multiple-candidate dot-truncation cases and then screened the final author representation for near-matching surname forms with compatible initials. Curated decisions used publication chronology, repeated coauthors (with particular weight on teams of no more than 20 authors), institutional context where available, and checks that candidate forms did not co-occur on the same publication. External bibliographic evidence was consulted selectively for rare or historically important cases.
+
+The transliteration/orthographic audit added 18 curated MERGE links. A subsequent targeted review of historical snapshot discrepancies added six further curated MERGE links, including incomplete-initial and truncated forms that could be verified against the underlying publications. No new same-publication identity collision was introduced. With all curated overrides applied, the representation contains 40,073 canonical author nodes from 41,966 normalized forms, with 1,893 variant forms merged. Ambiguous initial-prefix cases were not forced because resolving them may require record-level splitting rather than cluster-level merging.
+
+Operational decisions are stored in `corrections/author_identity_overrides.csv`; detailed record-level audit evidence is retained in the private reproducibility archive and is not redistributed with the licensed Web of Science data.

@@ -1,0 +1,70 @@
+article: lalli
+
+corpus_routing:
+  historical_author_networks: analytical
+  country_analysis: analytical
+  selected_institutional_comparisons: analytical
+
+historical_author_networks:
+  periods:
+    - [1959, 1968]
+    - [1969, 1973]
+    - [1974, 1978]
+    - [1983, 1983]
+    - [1986, 1986]
+  louvain_seed: 42
+  louvain_sensitivity_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  louvain_weight: paper_count
+  louvain_resolution: 1.0
+  community_comparison: adjusted_rand_index
+
+team_size_thresholds: [null, 100, 50, 20, 10]
+document_type_modes:
+  - unrestricted_analytical_corpus
+  - exclude_meeting_abstracts
+  - exclude_proceedings_and_meeting_abstracts
+  - articles_only
+
+country_reconstruction:
+  start_year: 1973
+  sources: [C1, RP]
+  within_record_deduplicate: true
+  no_imputation_without_evidence: true
+  historical_year_aware_normalization: true
+  strip_rp_corresponding_reprint_prefix: true
+
+jet:
+  geographic_representation: UK
+  geographic_uses: [international_collaboration_rate, european_indicators]
+  modified_representation: separate_JET_node
+  modified_uses: [figures_7_8, brokerage]
+  geographic_benchmark: true
+
+international_collaboration_rate:
+  interval: wilson_95
+  principal_smoothing:
+    kind: centered_pooled_ratio
+    years: 3
+    shortened_endpoints: false
+    output_years: [1974, 2006]
+  sensitivity_smoothing_years: 5
+
+modified_cocountry_windows:
+  - [1979, 1982]
+  - [1986, 1987]
+  - [1991, 1995]
+  - [1996, 2000]
+modified_cocountry_betweenness:
+  scope: largest_connected_component
+  topology: unweighted
+
+european_indicators:
+  membership: dynamic_historical_ec_eu
+  measures:
+    - european_fractional_output_share
+    - conditional_european_partner_share
+    - observed_expected_european_affinity
+  enlargement_sensitivity:
+    1986: [EC12_1986, EC10_1981]
+    1995: [EU15_1995, EC12_1986]
+    2004: [EU25_2004, EU15_1995]

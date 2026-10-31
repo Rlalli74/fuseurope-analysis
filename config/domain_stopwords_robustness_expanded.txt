@@ -1,0 +1,4 @@
+# Expanded domain stopwords used only as a robustness check.
+fusion
+nuclear
+thermonuclear

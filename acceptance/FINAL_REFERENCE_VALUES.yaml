@@ -1,0 +1,371 @@
+meta:
+  purpose: "Regression targets for the final two FusEurope papers"
+  status: "full licensed run and private aggregate acceptance validated 2026-10-30; public release pending"
+  integer_tolerance: 0
+  displayed_percentage_tolerance_pp: 0.05
+  displayed_three_decimal_tolerance: 0.0005
+
+shared:
+  preserved_retrieval_corpus:
+    records: 46443
+    unique_ut: 46443
+    columns: 46
+    sha256: "63b7725a3a40091d0b81107c7fd36a705c71aecdf5e658a1f69cca0089d8f414"
+  analytical_corpus:
+    records: 45453
+    exclusions_total: 990
+    editorial_material_excluded: 985
+    additional_non_editorial_event_summaries_excluded: 5
+  author_identity:
+    normalized_forms: 41966
+    canonical_identities: 40073
+    merged_variants: 1893
+    automatic_merges: 1844
+    curated_merge: 50
+    curated_keep_separate: 3
+    analytical_normalized_forms: 41793
+    analytical_canonical_identities: 39906
+    same_paper_identity_collisions: 0
+
+# -----------------------------------------------------------------------------
+# Guzzardi & Lalli
+# -----------------------------------------------------------------------------
+guzzardi_lalli:
+  corpus_routing:
+    publication_counts: preserved_retrieval
+    relative_publication_trends: preserved_retrieval
+    networks: analytical
+    communities: analytical
+    titleword_snapshots: analytical
+    historical_title_contrasts: analytical
+    author_continuity: analytical
+
+  network_snapshots:
+    1979:
+      papers: 554
+      authors: 1118
+      edges: 2998
+      components: 292
+      lcc_authors: 215
+      lcc_share_pct: 19.2
+      mean_authors_per_paper: 2.81
+      max_team_size: 25
+    1986:
+      papers: 618
+      authors: 2052
+      edges: 37511
+      components: 276
+      lcc_authors: 1215
+      lcc_share_pct: 59.2
+      mean_authors_per_paper: 5.60
+      max_team_size: 142
+    1996:
+      papers: 1764
+      authors: 5007
+      edges: 115448
+      components: 548
+      lcc_authors: 3215
+      lcc_share_pct: 64.2
+      mean_authors_per_paper: 5.10
+      max_team_size: 296
+    2001:
+      papers: 2267
+      authors: 6701
+      edges: 127702
+      components: 436
+      lcc_authors: 5205
+      lcc_share_pct: 77.7
+      mean_authors_per_paper: 6.55
+      max_team_size: 263
+
+  annual_lcc:
+    first_year_above_50_pct: 1985
+    first_year_above_50_value_pct: 50.6
+
+  team_size_sensitivity_lcc_pct:
+    columns: [all, le100, le50, le20, le10]
+    1979: [19.2, 19.2, 19.2, 17.0, 5.3]
+    1986: [59.2, 53.0, 45.6, 33.9, 4.3]
+    1996: [64.2, 59.5, 59.2, 54.6, 38.6]
+    2001: [77.7, 76.8, 75.0, 72.2, 63.3]
+
+  document_type_sensitivity_lcc_pct:
+    columns: [unrestricted, exclude_meeting_abstracts, exclude_proceedings_and_meeting_abstracts, articles_only]
+    1979: [19.2, 17.1, 17.1, 13.9]
+    1986: [59.2, 58.4, 58.4, 59.0]
+    1996: [64.2, 64.2, 52.6, 51.4]
+    2001: [77.7, 77.6, 70.4, 70.5]
+
+  louvain:
+    manuscript_seed: 42
+    sensitivity_seeds: [1, 7, 21, 42, 84]
+    resolution: 1.0
+    edge_weight: paper_count
+    seed_sensitivity:
+      1979:
+        community_count_range: [8, 9]
+        min_top20_overlap_vs_seed42_pct: 65
+        max_js: 0.0249
+      1986:
+        community_count_range: [22, 24]
+        min_top20_overlap_vs_seed42_pct: 95
+        max_js: 0.0128
+      1996:
+        community_count_range: [23, 25]
+        min_top20_overlap_vs_seed42_pct: 80
+        max_js: 0.0260
+      2001:
+        community_count_range: [31, 33]
+        min_top20_overlap_vs_seed42_pct: 95
+        max_js: 0.0128
+
+  lcc_representativeness:
+    1979:
+      top20_overlap_pct: 60
+      jaccard: 0.429
+      js: 0.257
+    1986:
+      top20_overlap_pct: 75
+      jaccard: 0.600
+      js: 0.129
+    1996:
+      top20_overlap_pct: 80
+      jaccard: 0.667
+      js: 0.065
+    2001:
+      top20_overlap_pct: 85
+      jaccard: 0.739
+      js: 0.033
+
+  cross_snapshot_lexical_recurrence_community_balanced:
+    "1979-1986":
+      top20_overlap_pct: 30
+      shared_terms: 6
+      jaccard: 0.176
+      js: 0.379
+      spearman_shared: 0.714
+      kendall_shared: 0.600
+      spearman_union: -0.311
+      kendall_union: -0.257
+    "1986-1996":
+      top20_overlap_pct: 35
+      shared_terms: 7
+      jaccard: 0.212
+      js: 0.342
+      spearman_shared: 0.679
+      kendall_shared: 0.524
+      spearman_union: -0.202
+      kendall_union: -0.173
+    "1996-2001":
+      top20_overlap_pct: 65
+      shared_terms: 13
+      jaccard: 0.481
+      js: 0.224
+      spearman_shared: 0.522
+      kendall_shared: 0.410
+      spearman_union: 0.366
+      kendall_union: 0.264
+
+  cross_snapshot_lexical_recurrence_paper_pooled:
+    "1979-1986": {top20_overlap_pct: 45, js: 0.336}
+    "1986-1996": {top20_overlap_pct: 50, js: 0.303}
+    "1996-2001": {top20_overlap_pct: 75, js: 0.177}
+
+  titleword_concentration:
+    1979: {vocab: 289, gini_full: 0.502, gini_top20: 0.430, top20_mass: 0.387}
+    1986: {vocab: 675, gini_full: 0.637, gini_top20: 0.344, top20_mass: 0.275}
+    1996: {vocab: 1797, gini_full: 0.683, gini_top20: 0.286, top20_mass: 0.199}
+    2001: {vocab: 2667, gini_full: 0.731, gini_top20: 0.278, top20_mass: 0.177}
+
+  preprocessing_sensitivity:
+    min_top20_overlap_pct: {1979: 100, 1986: 95, 1996: 95, 2001: 95}
+    max_js: {1979: 0.0025, 1986: 0.0049, 1996: 0.0039, 2001: 0.0051}
+
+  allocation_sensitivity_author_proportional_vs_equal:
+    top20_overlap_pct: {1979: 95, 1986: 100, 1996: 90, 2001: 100}
+    js: {1979: 0.0011, 1986: 0.0015, 1996: 0.0022, 2001: 0.0010}
+
+  author_continuity:
+    "1979-1986":
+      earlier_lcc: 215
+      later_lcc: 1215
+      shared: 89
+      survival_pct: 41.40
+      retention_pct: 7.33
+      annualized_survival: 0.882
+      whole_network_survival_pct: 31.13
+    "1986-1996":
+      earlier_lcc: 1215
+      later_lcc: 3215
+      shared: 492
+      survival_pct: 40.49
+      retention_pct: 15.30
+      annualized_survival: 0.914
+      whole_network_survival_pct: 38.16
+    "1996-2001":
+      earlier_lcc: 3215
+      later_lcc: 5205
+      shared: 1552
+      survival_pct: 48.27
+      retention_pct: 29.82
+      annualized_survival: 0.864
+      whole_network_survival_pct: 42.86
+    persistent_all_four_lccs: 36
+    median_lcc_degree_percentiles: [0.630, 0.709, 0.735, 0.713]
+
+  publication_trends:
+    smoother_years: 2
+    minimum_run_years: 3
+    minimum_mean_absolute_annual_change: 0.04
+    excluded_detection_years: [1962]
+    increase_intervals: [[1957, 1961], [1969, 1976], [1994, 1996]]
+    decrease_intervals: [[1964, 1968], [1980, 1982]]
+    source_coverage_1993: {records: 1015, leading_source_share_pct: 16.7}
+    source_coverage_1994: {records: 1576, physics_of_plasmas_share_pct: 30.3}
+
+  historical_title_contrasts:
+    "1968-1974_vs_1956-1967":
+      required_highest_ranked_feature: tokamak
+    "1994-1996_vs_1989-1993":
+      required_leading_sequence: [electron, nonlinear, laser, dynamics, magnetic, cyclotron, instability, JT-60U, Alfven]
+
+# -----------------------------------------------------------------------------
+# Lalli
+# -----------------------------------------------------------------------------
+lalli:
+  historical_author_networks:
+    "1959-1968": {papers: 652, authors: 929, lcc_authors: 154, lcc_edges: 351, lcc_share_pct: 16.6}
+    "1969-1973": {papers: 944, authors: 1287, lcc_authors: 356, lcc_edges: 1205, lcc_share_pct: 27.7}
+    "1974-1978": {papers: 2511, authors: 3008, lcc_authors: 1625, lcc_edges: 6681, lcc_share_pct: 54.0}
+    1983: {papers: 464, authors: 1183, lcc_authors: 161, lcc_edges: 1900, lcc_share_pct: 13.6}
+    1986: {papers: 618, authors: 2052, lcc_authors: 1215, lcc_edges: 35196, lcc_share_pct: 59.2}
+    "1974-1978_full_network_edges": 8338
+    "1974-1978_lcc_edge_share_pct": 80.1
+
+  annual_lcc_selected:
+    1985: 50.6
+    1986: 59.2
+    1987: 47.5
+    1988: 48.4
+    1989: 59.3
+
+  authorship_scale:
+    single_authored_share_pct:
+      "1956-1968": 38.1
+      "1996-2007": 13.1
+    mean_team_size:
+      "1956-1968": 2.38
+      "1996-2007": 5.83
+    1986_large_team_counts:
+      papers_gt20: 28
+      papers_gt50: 11
+      max_team_size: 142
+
+  team_size_sensitivity_lcc_pct:
+    columns: [all, le100, le50, le20, le10]
+    1979: [19.2, 19.2, 19.2, 17.0, 5.3]
+    1983: [13.6, 13.6, 5.5, 5.7, 4.4]
+    1986: [59.2, 53.0, 45.6, 33.9, 4.3]
+    1996: [64.2, 59.5, 59.2, 54.6, 38.6]
+    2001: [77.7, 76.8, 75.0, 72.2, 63.3]
+
+  document_type_sensitivity_lcc_pct:
+    columns: [unrestricted, exclude_meeting_abstracts, exclude_proceedings_and_meeting_abstracts, articles_only]
+    1979: [19.2, 17.1, 17.1, 13.9]
+    1983: [13.6, 14.0, 14.0, 5.2]
+    1986: [59.2, 58.4, 58.4, 59.0]
+    1996: [64.2, 64.2, 52.6, 51.4]
+    2001: [77.7, 77.6, 70.4, 70.5]
+
+  louvain_seed_sensitivity:
+    manuscript_seed: 42
+    alternative_seeds: "0-19"
+    "1959-1968": {median_ari: 0.931, min_ari: 0.821, modularity_range: [0.8124, 0.8138]}
+    "1969-1973": {median_ari: 1.000, min_ari: 0.953, modularity_range: [0.8782, 0.8790]}
+    "1974-1978": {median_ari: 0.923, min_ari: 0.802, modularity_range: [0.9037, 0.9059]}
+    1986: {median_ari: 0.948, min_ari: 0.741, modularity_range: [0.7898, 0.7926]}
+
+  address_coverage:
+    1973: 92.3
+    1974: 99.0
+    1975: 98.3
+    "1956-1968_reconstructable_country_pct": 0.2
+    "1969-1972_reconstructable_country_pct": 8.4
+
+  rp_jet_parser_audit:
+    rp_strings_with_prefix_initially_blocking_jet: 431
+    analytical_corpus_count: 417
+
+  icr_selected_years:
+    1973: {analytical_publications: 339, country_coded: 313, coverage_pct: 92.3, international: 9, icr_pct: 2.9}
+    1979: {analytical_publications: 554, country_coded: 534, coverage_pct: 96.4, international: 12, icr_pct: 2.2}
+    1983: {analytical_publications: 464, country_coded: 454, coverage_pct: 97.8, international: 26, icr_pct: 5.7}
+    1986: {analytical_publications: 618, country_coded: 598, coverage_pct: 96.8, international: 45, icr_pct: 7.5}
+    1991: {analytical_publications: 1048, country_coded: 1043, coverage_pct: 99.5, international: 188, icr_pct: 18.0}
+    1996: {analytical_publications: 1764, country_coded: 1753, coverage_pct: 99.4, international: 339, icr_pct: 19.3}
+    2000: {analytical_publications: 2082, country_coded: 2079, coverage_pct: 99.9, international: 566, icr_pct: 27.2}
+    2004: {analytical_publications: 2161, country_coded: 2159, coverage_pct: 99.9, international: 666, icr_pct: 30.8}
+    2007: {analytical_publications: 2785, country_coded: 2779, coverage_pct: 99.8, international: 823, icr_pct: 29.6}
+
+  modified_cocountry_top_betweenness:
+    "1979-1982":
+      - [UK, 11, 19, 0.291]
+      - [USA, 14, 41, 0.269]
+      - [GERMANY, 14, 26, 0.269]
+      - [FRANCE, 8, 16, 0.267]
+      - [USSR, 9, 12, 0.199]
+    "1986-1987":
+      - [USA, 17, 61, 0.422]
+      - [FRANCE, 11, 14, 0.285]
+      - [UK, 10, 26, 0.205]
+      - [USSR, 10, 14, 0.146]
+      - [GERMANY, 12, 37, 0.144]
+    "1991-1995":
+      - [GERMANY, 36, 593, 0.190]
+      - [USA, 38, 961, 0.189]
+      - [RUSSIA, 35, 384, 0.138]
+      - [FRANCE, 30, 215, 0.117]
+      - [UK, 31, 306, 0.111]
+    "1996-2000":
+      - [GERMANY, 48, 1232, 0.174]
+      - [FRANCE, 33, 604, 0.152]
+      - [JAPAN, 39, 662, 0.128]
+      - [USA, 45, 1645, 0.120]
+      - [RUSSIA, 42, 852, 0.086]
+
+  jet_geographic_benchmark_1979_1982:
+    geographic_uk_betweenness: 0.236
+    modified_uk_betweenness: 0.291
+    geographic_usa_betweenness: 0.278
+    modified_usa_betweenness: 0.269
+    geographic_germany_betweenness: 0.278
+    modified_germany_betweenness: 0.269
+
+  european_period_measures:
+    columns: [coverage_pct, icr_pct, european_fractional_output_share_pct, conditional_european_partner_share_pct, oe_affinity]
+    "1973-1977": [96.9, 2.8, 22.0, 43.9, 1.110]
+    "1978-1985": [96.6, 4.9, 19.6, 40.7, 1.286]
+    "1986-1994": [98.8, 14.6, 26.9, 53.1, 1.364]
+    "1995-1997": [99.4, 21.4, 26.2, 53.1, 1.286]
+    "1998-2003": [99.7, 28.5, 30.3, 68.2, 1.349]
+    "2004-2007": [99.8, 29.3, 31.1, 76.5, 1.347]
+
+  enlargement_sensitivity:
+    1986:
+      dynamic_set: EC-12
+      legacy_core: EC-10
+      output_share_dynamic_core_pct: [26.6, 25.6]
+      partner_share_dynamic_core_pct: [52.5, 52.5]
+      affinity_dynamic_core: [1.350, 1.350]
+    1995:
+      dynamic_set: EU-15
+      legacy_core: EC-12
+      output_share_dynamic_core_pct: [24.6, 22.8]
+      partner_share_dynamic_core_pct: [50.8, 47.8]
+      affinity_dynamic_core: [1.383, 1.492]
+    2004:
+      dynamic_set: EU-25
+      legacy_core: EU-15
+      output_share_dynamic_core_pct: [30.5, 29.3]
+      partner_share_dynamic_core_pct: [71.4, 68.7]
+      affinity_dynamic_core: [1.242, 1.251]

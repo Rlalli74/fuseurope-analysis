@@ -1,0 +1,35 @@
+# Local Python installations and test caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+__MACOSX/
+
+# Local licensed-source and analytical outputs -- never commit
+private_data/
+private_inputs/
+pipeline_outputs/
+outputs/
+outputs_*/
+working_data/
+raw_data/
+data_private/
+*.pickle
+*.pkl
+*.parquet
+*.graphml
+*.gexf
+**/analytical_corpus*.csv
+**/*_UT_ONLY*.csv
+**/*_UT_ONLY*.txt
+**/wos_analysis_snapshot*
+**/WoS*.txt
+**/WoS*.csv
+
+# Packaging artifacts and generated output
+dist/
+release_staging/
+*.log

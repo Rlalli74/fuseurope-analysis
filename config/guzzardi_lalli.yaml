@@ -1,0 +1,57 @@
+article: guzzardi_lalli
+
+corpus_routing:
+  publication_counts: preserved_retrieval
+  relative_publication_trends: preserved_retrieval
+  networks: analytical
+  communities: analytical
+  author_continuity: analytical
+  titleword_snapshots: analytical
+  historical_title_contrasts: analytical
+
+publication_trends:
+  smoothing_window_years: 2
+  minimum_run_years: 3
+  minimum_mean_absolute_annual_change: 0.04
+  excluded_detection_years: [1962]
+  sensitivity_windows: [1, 2, 3, 4]
+  sensitivity_thresholds: [0.0, 0.02, 0.04, 0.06]
+
+network_snapshots: [1979, 1986, 1996, 2001]
+louvain:
+  seed: 42
+  sensitivity_seeds: [1, 7, 21, 42, 84]
+  resolution: 1.0
+  edge_weight: paper_count
+
+titlewords:
+  lexical_unit: normalized_unigram
+  unicode_normalization: NFKC
+  preserve_internal_hyphens: true
+  strip_markup_tags: true
+  remove_pure_numerals: true
+  remove_ordinals: true
+  english_stopwords: english_stopwords.txt
+  domain_stopwords: domain_stopwords_main.txt
+  inflection_map: titleword_merge_map.csv
+  allocation: equal_1_over_q_communities
+  prevalence_aggregation: unweighted_mean_of_normalized_community_profiles
+  allocation_sensitivity: author_proportional
+  aggregation_sensitivity: direct_paper_pooled_lcc
+
+historical_title_contrasts:
+  contrasts:
+    - baseline: [1956, 1967]
+      focal: [1968, 1974]
+    - baseline: [1989, 1993]
+      focal: [1994, 1996]
+  ngrams: [1, 2]
+  document_presence: true
+  min_document_frequency: 3
+  haldane_anscombe: 0.5
+  effect_size: log_odds
+  ranking: z_score
+
+excluded_from_reviewer_release:
+  - longitudinal_lineage_analysis
+  - entrant_analysis
