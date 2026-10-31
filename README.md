@@ -30,7 +30,7 @@ For step-by-step publication instructions in Italian, see `docs/GITHUB_PUBLICATI
 
 ## AI-assisted development and author responsibility
 
-Generative AI tools, including ChatGPT, were used to assist in the development, refinement, debugging, and documentation of portions of the analytical code. All methodological decisions, scientific interpretations, and responsibility for the accuracy, reliability, and reproducibility of the code and its results remain solely with the software author, Roberto Lalli. The computational pipeline was tested and validated against reference results using the underlying research data.
+Generative AI tools, including ChatGPT, were used to assist in the development, refinement, debugging, and documentation of portions of the analytical code. All methodological decisions, and responsibility for the accuracy, reliability, and reproducibility of the code and its results remain solely with the software author. The computational pipeline was tested and validated against reference results using the underlying research data.
 
 ## Main Workflow
 
