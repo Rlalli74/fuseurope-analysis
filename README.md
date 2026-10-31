@@ -24,7 +24,7 @@ The mapping between manuscript results and code components is documented in:
 
 `docs/METHODS_CODE_CROSSWALK.md`
 
-**RELEASE STATUS (30 October 2026):** The complete private licensed-data run and its aggregate numerical acceptance have been completed (563/563 targets matched) on macOS Apple Silicon with Python 3.13.5. Independent reuse still requires licensed inputs. The public repository remains a staging candidate until the licence and redistribution-rights checks and an actual GitHub release. No GitHub URL or DOI has been assigned. See `docs/RELEASE_STATUS_AND_SCOPE.md`.
+**SOFTWARE VERSION:** 1.0.0 (pre-release preparation; no release tag or DOI yet). The private licensed-data analysis and final aggregate numerical acceptance were completed (563/563 checks matched) on macOS Apple Silicon with Python 3.13.5. The source repository is hosted at [GitHub](https://github.com/Rlalli74/fuseurope-analysis) and remains private pending final rights and public-release checks. Exact reproduction requires lawful access to the specified licensed inputs. See `docs/RELEASE_STATUS_AND_SCOPE.md`.
 
 For step-by-step publication instructions in Italian, see `docs/GITHUB_PUBLICATION_GUIDE_IT.md`.
 
@@ -129,7 +129,7 @@ See also:
 
 Run `python scripts/audit_public_repository.py` and personally review the proposed Git commit. The script checks common signs of restricted records, locally embedded credentials, record-level tables, and notebook saved outputs; it cannot independently guarantee that all material is legally redistributable.
 
-The software author is **Roberto Lalli** and `CITATION.cff` records this attribution. A software **licence has not yet been selected or granted**; consult `docs/LICENSE_AND_CITATION_DECISIONS.md` before public release.
+The software is licensed under the **MIT License** (copyright 2026 Roberto Lalli; see `LICENSE`), subject to the author having the necessary rights to license the materials. This does **not** license or redistribute the underlying Web of Science data or any other excluded third-party records. See `CITATION.cff` for citation metadata and `docs/LICENSE_AND_CITATION_DECISIONS.md` for scope and remaining rights checks.
 
 ## Repository Structure
 

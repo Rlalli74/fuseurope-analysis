@@ -1,15 +1,19 @@
-# Publication readiness — 30 October 2026
+# Publication readiness — version 1.0.0 preparation
 
-**STATUS: VERIFIED SOURCE CANDIDATE; NOT YET A PUBLIC RELEASE.**
+**STATUS: validated source, currently private; first public release and DOI pending.**
 
-- [x] Execute licensed end-to-end scientific analysis privately, including geographic C1/RP and final figure-generation scripts.
-- [x] Match all 563 numerical/metadata acceptance targets and audit original UT membership and derived C1/RP fields.
-- [x] Re-run source-only tests (69 PASS), reviewer demo and scanner after source modifications.
-- [x] Confirm updated 46-column release matches 563/563 against the existing private run using `docs/VERIFY_FINAL46_ON_MAC.md` (Mac validation supplied by researcher).
-- [ ] Confirm researcher-authored correction-table redistribution permissions.
-- [x] Record sole software authorship (Roberto Lalli) and create `CITATION.cff`.
-- [ ] Select/add `LICENSE` after confirming rights and permissions.
-- [ ] Audit the entire initial Git commit to exclude restricted WoS data and private reports.
-- [ ] Publish an actual GitHub release and optionally archive it with Zenodo; add only real release identifiers to the SI.
+- [x] Complete the private licensed-data pipeline and figure-generation phases.
+- [x] Check all 563 final numerical/provenance acceptance targets and audit C1/RP transformations.
+- [x] Run 69 source-only synthetic/invariant tests and the reviewer demonstration (prior source candidate).
+- [x] Confirm the definitive 46-column code package matches the existing private run (563/563) on the researcher's Mac.
+- [x] Record the sole software author, Roberto Lalli, in the citation metadata.
+- [x] Select and add the MIT `LICENSE` (copyright 2026 Roberto Lalli) in the GitHub repository.
+- [ ] Confirm redistribution rights for curated corrections and any other externally sourced content.
+- [ ] Review the initial Git commit and complete history for restricted files, as well as current files.
+- [ ] Confirm the final metadata-only version 1.0.0 commit and run the safety scan and tests.
+- [ ] Make the repository public **after** the rights/history review.
+- [ ] Connect GitHub with Zenodo and enable the repository in Zenodo **before creating the release**.
+- [ ] Publish the GitHub version tag `v1.0.0` and verify that Zenodo has archived it with a DOI.
+- [ ] Update the joint SI and the two articles only with verified public links and DOI information.
 
-The public source version is documented in `docs/FULL_LICENSED_VALIDATION.md` and `docs/RELEASE_STATUS_AND_SCOPE.md`.
+See `docs/GITHUB_PUBLICATION_GUIDE_IT.md` for the remaining instructions.

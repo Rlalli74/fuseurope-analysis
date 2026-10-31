@@ -5,4 +5,6 @@ title: "FusEurope Analysis: Reproducibility Pipeline for Historical Nuclear Fusi
 authors:
   - family-names: Lalli
     given-names: Roberto
-version: 0.19.0rc1
+version: 1.0.0
+repository-code: https://github.com/Rlalli74/fuseurope-analysis
+license: MIT

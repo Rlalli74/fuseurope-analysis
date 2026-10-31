@@ -33,3 +33,6 @@ data_private/
 dist/
 release_staging/
 *.log
+
+# macOS Finder metadata
+.DS_Store

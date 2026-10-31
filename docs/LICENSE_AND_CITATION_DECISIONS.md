@@ -1,15 +1,19 @@
-# Software authorship, licence and citation: publication decisions
+# Software authorship, MIT licence and citation
 
-## Confirmed software authorship
+## Authorship
 
-**Roberto Lalli is the sole named author and maintainer of the FusEurope public reproducibility software**, as specified for this repository. The authorship of the two scientific articles is a separate matter and is unchanged. `CITATION.cff` and `pyproject.toml` record Roberto Lalli as the sole software author.
+Roberto Lalli is the sole named author and repository maintainer of the public FusEurope analytical software. The authorship of the two scholarly articles is a separate matter and remains unchanged.
 
-## Licence still to be selected
+## MIT software licence
 
-**No licence is granted by this staging package.** The author attribution does not by itself establish whether any institutional, employer, contractual, or third-party rights need to be cleared. Before making the repository publicly reusable, confirm the necessary redistribution rights for the code and curated correction materials and select an appropriate software licence (for example MIT, if authorized). Only then add the full `LICENSE` text and match its copyright line to the confirmed rights holders.
+The repository contains a root-level `LICENSE` file: **MIT License, copyright 2026 Roberto Lalli**, added by the author on GitHub. The MIT licence covers code and material only to the extent the author has the necessary rights to grant it; third-party or institutionally held rights must be respected. Before making the repository public, independently confirm rights to share the curated corrections and any other externally derived components.
 
-GitHub can host a public repository without a licence, but visibility does **not** automatically grant permission to reuse, modify or redistribute its contents.
+**The MIT licence does not grant access to or redistribute licensed Web of Science bibliographic records, private adjudication data or third-party comparison series.** Such data are not included here.
 
-## Citation and release identifiers
+## Citation
 
-`CITATION.cff` identifies the software title, Roberto Lalli, and the current candidate package version. It deliberately contains **no invented GitHub URL, release date, DOI, or institutional affiliation**. Add actual repository and DOI identifiers when a release has been created; avoid citing the candidate as an already archived release.
+`CITATION.cff` identifies Roberto Lalli, software version `1.0.0` and the real source-repository URL: https://github.com/Rlalli74/fuseurope-analysis. Do not add a release date or Zenodo DOI until the corresponding version has actually been published and archived. For research-paper citations, prefer the version-specific DOI returned by Zenodo.
+
+## AI assistance
+
+The README transparently identifies the use of generative AI tools to assist code development and the author's sole responsibility for methodology, validation and scientific interpretation.
